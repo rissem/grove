@@ -7,10 +7,16 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 ipykernel = "^6.29.0"
 feedparser = "^6.0.11"
+jupyterlab = "^4.0.12"
 
+# Sadly torch and poetry don't seem to play nice with each other
+# https://github.com/python-poetry/poetry/issues/6409
+# Have to `poetry shell`
+# `pip install torch` (see README for full installation steps
+numpy = "^1.26.3"
 
 [build-system]
 requires = ["poetry-core"]
